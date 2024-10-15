@@ -1,6 +1,6 @@
 # JPA-Hibernate
 
-Ce projet implémente un système de gestion de stock, de projets et de produits en Java. Il permet de gérer les projets et les tâches associées via des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) grâce à l'intégration du framework de persistance JPA-Hibernate, facilitant la manipulation des données en base de données. Le développement a été réalisé avec l'IDE NetBeans.
+Ce projet propose un système de gestion de stock, de projets et de produits, développé en Java. Il permet la gestion des projets, des tâches associées, ainsi que la manipulation de données à travers diverses opérations CRUD (Create, Read, Update, Delete). Le framework de persistance JPA Hibernate est utilisé pour simplifier ces interactions avec la base de données. Le développement est principalement réalisé avec l'IDE NetBeans.
 
 ## Technologies Utilisées
 
@@ -8,7 +8,7 @@ Ce projet implémente un système de gestion de stock, de projets et de produits
 - **JDBC (Java Database Connectivity)** : Pour interagir avec la base de données MySQL.
 - **MySQL** : SGBD utilisé pour stocker les informations liées aux projets, produits et tâches.
 - **Hibernate** : Framework de persistance pour simplifier la gestion des entités Java en base de données.
-- **NetBeans** : IDE recommandé pour développer, tester, et déployer l'application.
+- **NetBeans** : IDE recommandé pour développer, tester et déployer l'application.
 
 ## Prérequis
 
@@ -27,8 +27,8 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 - Créez les tables pour gérer les projets, produits et tâches. Vous pouvez utiliser le script SQL fourni dans le fichier `setup.sql` du projet.
 
 ### 2. Configuration de Hibernate
-- Créez un fichier de configuration Hibernate (`hibernate.cfg.xml`) dans le package `ma.projet.config`. Ce fichier doit inclure les informations de connexion à la base de données MySQL, notamment l'URL, le nom d'utilisateur, et le mot de passe.
-  
+- Créez un fichier de configuration Hibernate (`hibernate.cfg.xml`) dans le package `ma.projet.config`. Ce fichier doit inclure les informations de connexion à la base de données MySQL, notamment l'URL, le nom d'utilisateur et le mot de passe.
+
 Exemple de fichier `hibernate.cfg.xml` :
 
 ```xml
@@ -45,39 +45,26 @@ Exemple de fichier `hibernate.cfg.xml` :
 </hibernate-configuration>
 ## Fonctionnalités Principales
 
-- **Requêtes SQL** :  
-  Le système prend en charge l'exécution des requêtes SQL suivantes :  
+- *Requêtes SQL :*  
+  Le système permet d'exécuter des requêtes SQL telles que :  
   - Identifier le développeur ayant généré le plus de scripts en une journée.
   - Classer les développeurs selon leur production hebdomadaire.
   - Calculer le nombre total de scripts réalisés par un développeur spécifique.
 
 ### 1. Gestion des Projets
-- **Création de projets** :  
-  Créez de nouveaux projets avec des informations telles que le nom du projet, la date de début et les membres de l'équipe.
-- **Suivi des tâches** :  
-  Gère les tâches associées à chaque projet, y compris les dates de début et de fin, ainsi que le statut de chaque tâche.
-- **Affichage des projets** :  
-  Liste tous les projets en cours, affichant les détails comme les tâches assignées et l'avancement de chaque projet.
-- **Recherche et filtrage des projets** :  
-  Permet de rechercher et de filtrer des projets en fonction de critères spécifiques comme les membres de l'équipe ou les dates importantes.
+- *Création de projets* : Crée de nouveaux projets avec des informations détaillées comme le nom, la date de début et les membres de l'équipe.
+- *Suivi des tâches* : Gère les tâches liées à chaque projet, en incluant les dates de début et de fin, ainsi que leur statut.
+- *Affichage des projets* : Liste tous les projets avec leurs détails, incluant les tâches assignées et leur avancement.
+- *Recherche et filtrage des projets* : Permet de rechercher des projets selon des critères spécifiques, tels que les membres de l'équipe ou les dates clés.
 
 ### 2. Gestion des Stocks
-- **Ajout de nouveaux articles** :  
-  Ajoutez de nouveaux articles avec des informations telles que la quantité, le prix, et la catégorie.
-- **Mise à jour des niveaux de stock** :  
-  Suivez et ajustez les niveaux de stock en fonction des entrées et sorties d'articles.
-- **Affichage de l'état des stocks** :  
-  Visualisez l'état des stocks avec la possibilité de filtrer par catégorie ou par date d'ajout.
-- **Alertes de stock bas** :  
-  Recevez des notifications lorsque le niveau de stock d'un article descend sous un seuil défini.
+- *Ajout de nouveaux articles* : Permet d'ajouter de nouveaux articles avec des informations telles que la quantité, le prix et la catégorie.
+- *Mise à jour des niveaux de stock* : Suit les niveaux de stock et ajuste les quantités en fonction des entrées et sorties.
+- *Affichage de l'état des stocks* : Offre une vue d'ensemble des articles en stock avec des options de filtrage par catégorie ou par date.
+- *Alertes de stock bas* : Émet des notifications pour les articles dont les niveaux de stock sont sous un seuil défini.
 
 ### 3. Gestion des Produits
-- **Création de produits** :  
-  Créez de nouveaux produits avec des détails tels que la description, le prix, et la catégorie associée.
-- **Modification des produits** :  
-  Mettez à jour les informations des produits existants selon les besoins.
-- **Suppression de produits** :  
-  Supprimez des produits du système si nécessaire.
-- **Affichage et filtrage des produits** :  
-  Listez les produits disponibles avec des options de filtrage par catégorie ou par gamme de prix.
-
+- *Création de produits* : Crée de nouveaux produits avec des détails comme la description, le prix et la catégorie.
+- *Modification des produits* : Permet de mettre à jour les informations des produits existants.
+- *Suppression de produits* : Offre la possibilité de supprimer des produits du système si nécessaire.
+- *Affichage et filtrage des produits* : Liste les produits disponibles avec des options de filtrage par catégorie ou par gamme de prix.
